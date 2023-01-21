@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <h2>Todo Liste</h2>
+  </div>
+  <div class="row">
+    <input type="text"
+           placeholder="Tätigkeit">
+  </div>
+  <br>
+  <div class="row">
+    <input type="submit"
+           value="Submit">
+  </div>
+  <br>
+  <div *ngFor="let task of []"
+       class="row todo-item">
+    <div>bla</div>
+    <img src="/assets/trash-solid.svg" width="20" height="20" class="icon" alt="delete">
+  </div>
+</div>
