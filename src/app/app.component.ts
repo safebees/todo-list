@@ -7,4 +7,16 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
 
+  todoInput: string = '';
+
+  myTodos = ['Fiire nach dere langwiilige Lektion'];
+
+  addTodoItem() {
+    this.myTodos.push(this.todoInput);
+    this.myTodos.sort((a, b) => a.localeCompare(b));
+  }
+
+  removeTodo(todoToRemove: string) {
+    this.myTodos = this.myTodos.filter((todo) => todo !== todoToRemove);
+  }
 }

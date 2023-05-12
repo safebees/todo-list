@@ -4,17 +4,22 @@
   </div>
   <div class="row">
     <input type="text"
+           [(ngModel)]="todoInput"
            placeholder="Tätigkeit">
   </div>
   <br>
   <div class="row">
     <input type="submit"
-           value="Submit">
+           (click)="addTodoItem()"
+           value="Speichern">
   </div>
   <br>
-  <div *ngFor="let task of []"
+  <div *ngFor="let todo of myTodos"
        class="row todo-item">
-    <div>bla</div>
-    <img src="/assets/trash-solid.svg" width="20" height="20" class="icon" alt="delete">
+    <div>
+      {{todo}}
+    </div>
+    <img src="/assets/trash-solid.svg" width="20" height="20" class="icon" alt="delete"
+         (click)="removeTodo(todo)">
   </div>
 </div>
